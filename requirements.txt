@@ -12,7 +12,7 @@ gradio_client==0.2.5
 onnx
 onnxruntime-gpu
 huggingface_hub
-segment_anything
+git+https://github.com/facebookresearch/segment-anything-2.git
 requests
 numpy
 einops
