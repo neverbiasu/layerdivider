@@ -8,7 +8,6 @@ from PIL import Image
 from sam2.build_sam import build_sam2
 from modules.safe import unsafe_torch_load, load
 from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
-from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
 
 
 def get_mask_generator(
@@ -33,7 +32,7 @@ def get_mask_generator(
         )
         sam2.to(device=device)
 
-    mask_generator_2 = SamAutomaticMaskGenerator(
+    mask_generator_2 = SAM2AutomaticMaskGenerator(
         model=sam2,
         pred_iou_thresh=pred_iou_thresh,
         stability_score_thresh=stability_score_thresh,
@@ -44,6 +43,8 @@ def get_mask_generator(
 
 
 def get_masks(image, mask_generator_2):
+    if isinstance(image, np.ndarray):
+        image = image.copy()
     masks = mask_generator_2.generate(image)
     return masks
 

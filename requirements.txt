@@ -1,14 +1,14 @@
-opencv-python==4.7.0.68
-pandas==1.5.3
-gradio==3.16.2
-scikit-learn==1.2.1
-scikit-image==0.19.3
+opencv-python==4.10.0.84
+pandas==2.2.2
+gradio==4.41.0
+scikit-learn==1.5.1
+scikit-image==0.24.0
 Pillow==9.4.0
 tqdm>=4.66.1
 pytoshop==1.2.1
 psd-tools==1.9.24
-gradio==3.16.2
-gradio_client==0.2.5
+gradio_client==1.3.0
+matplotlib==3.9.2
 onnx
 onnxruntime-gpu
 huggingface_hub
@@ -17,3 +17,4 @@ requests
 numpy
 einops
 torch
+modules==1.0.0

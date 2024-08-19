@@ -466,7 +466,7 @@ class webui:
             )
 
         self.demo.queue()
-        self.demo.launch(share=share)
+        self.demo.launch(share=share, server_port=6006)
 
 
 if __name__ == "__main__":
