@@ -51,8 +51,8 @@ def add_psd(psd, img, name, mode):
 
 def load_seg_model(model_dir):
   folder = model_dir
-  file_name = 'sam_vit_h_4b8939.pth'
-  url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
+  file_name = 'sam2_hiera_base_plus.pt'
+  url = "https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2_hiera_base_plus.pt"
 
   file_path = os.path.join(folder, file_name)
   if not os.path.exists(file_path):
