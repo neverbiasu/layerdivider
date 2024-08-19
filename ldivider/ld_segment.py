@@ -6,7 +6,6 @@ import numpy as np
 
 from PIL import Image
 from sam2.build_sam import build_sam2
-from modules.safe import unsafe_torch_load, load
 from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
 
 
@@ -19,6 +18,7 @@ def get_mask_generator(
     model_type = "default"
 
     if exe_mode == "extension":
+        from modules.safe import unsafe_torch_load, load
 
         torch.load = unsafe_torch_load
         sam2 = build_sam2(
